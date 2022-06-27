@@ -47,32 +47,32 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 module.exports = generateMarkdown => {
   const { data } = generateMarkdown;
-  return `# ${title}
-          ${renderLicenseBadge(response)}
-          ## Description 
-          ${description}
-          ## Table of Contents
-          - [Installation](#installation)
-          - [Usage](#usage)
-          - [Credits](#credits)
-          - [Tests](#tests)
-          - [License](#license)
-          - [Questions](#questions)
-          ## Installation
-          ${installation}
-          ## Usage
-          ${usage}
-          ## Credits
-          ${credits}
-          ## Tests
-          ${tests}
-          ## License
-          This project is using the ${data.license} license. For further information, please visit [here](https://choosealicense.com/licenses/).
-          ## Questions
-          If you have any questions or general comments, please feel free to contact me!
-          Here are some ways to get in touch with me:
-          GitHub: [${data.email}](https://github.com/${data.username})
-          Email: <${data.email}>
+  return `# ${generateMarkdown.title}
+  ${renderLicenseBadge(generateMarkdown)}
+  ## Description 
+  ${generateMarkdown.description}
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [Tests](#tests)
+  - [License](#license)
+  - [Questions](#questions)
+  ## Installation
+  ${generateMarkdown.installation}
+  ## Usage
+  ${generateMarkdown.usage}
+  ## Credits
+  ${generateMarkdown.credits}
+  ## Tests
+  ${generateMarkdown.tests}
+  ## License
+  This project is using the ${generateMarkdown.license} license. For further information, please visit [here](https://choosealicense.com/licenses/).
+  ## Questions
+  If you have any questions or general comments, please feel free to contact me!
+  Here are some ways to get in touch with me:
+  GitHub: [${generateMarkdown.github}](https://github.com/${generateMarkdown.github})
+  Email: <${generateMarkdown.email}>
 
 
 `;
